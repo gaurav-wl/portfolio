@@ -407,67 +407,66 @@ function initializeScrollAnimations() {
 }
 
 // Contact form functionality - Enhanced
+// Contact form functionality - Netlify integrated
 function initializeContactForm() {
     const contactForm = document.getElementById('contactForm');
-    
+    const successMsg = document.createElement('p');
+    successMsg.id = 'formSuccess';
+    successMsg.style.display = 'none';
+    successMsg.style.color = '#00ff88';
+    successMsg.style.marginTop = '10px';
+    successMsg.style.fontWeight = 'bold';
+    contactForm.parentNode.appendChild(successMsg);
+
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Stop default browser reload
+
+            // Validate
+            const formData = new FormData(contactForm);
             const name = formData.get('name');
             const email = formData.get('email');
             const subject = formData.get('subject');
             const message = formData.get('message');
-            
-            // Basic form validation
+
             if (!name || !email || !subject || !message) {
                 showNotification('Please fill in all fields.', 'error');
                 return;
             }
-            
             if (!isValidEmail(email)) {
                 showNotification('Please enter a valid email address.', 'error');
                 return;
             }
-            
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
+
+            // Show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-            
-            // Create mailto link
-            setTimeout(() => {
-                const mailtoLink = `mailto:gauravbharadwaj.bharadwaj@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
-                window.location.href = mailtoLink;
-                
-                showNotification('Message prepared! Your email client should open now.', 'success');
-                
-                // Reset form
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 1000);
-        });
 
-        // Add real-time validation
-        const inputs = contactForm.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('blur', function() {
-                validateField(this);
-            });
+            // Send to Netlify
+            fetch('/', {
+                method: 'POST',
+                body: new URLSearchParams(formData).toString(),
+                headers: { "Content-Type": "application/x-www-form-urlencoded" }
+            })
+                .then(() => {
+                    contactForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
 
-            input.addEventListener('input', function() {
-                // Remove error styling on input
-                this.style.borderColor = '';
-                const errorMsg = this.parentNode.querySelector('.error-message');
-                if (errorMsg) {
-                    errorMsg.remove();
-                }
-            });
+                    // Custom success message
+                    successMsg.textContent = '✅ I have received your email and will get back to you soon!';
+                    successMsg.style.display = 'block';
+
+                    showNotification('Message sent successfully!', 'success');
+                })
+                .catch((err) => {
+                    console.error(err);
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    showNotification('Something went wrong, please try again later.', 'error');
+                });
         });
     }
 }
