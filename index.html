@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Bharadwaj - Senior GoLang Backend Developer</title>
+    <meta name="description" content="Gaurav Bharadwaj - Experienced GoLang Backend Developer with 7 years of experience in crafting high-performance solutions for scalable applications">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">GB</a>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="hero-intro">Hi, I'm</div>
+                    <h1 class="hero-name">Gaurav Bharadwaj</h1>
+                    <h2 class="hero-title">Software Engineer at American Express</h2>
+                    <p class="hero-subtitle">7 Years Experience • GoLang Backend Specialist</p>
+                    
+                    <!-- Quick Facts Section -->
+                    <div class="quick-facts">
+                        <div class="fact-item">
+                            <span class="fact-label">Experience:</span>
+                            <span class="fact-value">7 Years</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Location:</span>
+                            <span class="fact-value">Haywards Heath, UK</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Specialization:</span>
+                            <span class="fact-value">GoLang Backend Development</span>
+                        </div>
+                    </div>
+
+                    <!-- Core Skills Badges -->
+                    <div class="hero-skills">
+                        <span class="skill-badge">GoLang</span>
+                        <span class="skill-badge">Microservices</span>
+                        <span class="skill-badge">Kubernetes</span>
+                        <span class="skill-badge">AWS</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">Docker</span>
+                    </div>
+
+                    <!-- Quick Contact & Social Links -->
+                    <div class="hero-contact">
+                        <div class="contact-quick">
+                            <a href="mailto:gauravbharadwaj.bharadwaj@gmail.com" class="contact-link">
+                                <span class="contact-icon">✉</span>
+                                gauravbharadwaj.bharadwaj@gmail.com
+                            </a>
+                            <a href="tel:+447823813425" class="contact-link">
+                                <span class="contact-icon">📞</span>
+                                +44 7823813425
+                            </a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/gaurav-bharadwaj-55186bb4/" target="_blank" class="social-link">LinkedIn</a>
+                            <a href="https://github.com/gaurav-wl" target="_blank" class="social-link">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn--primary">Get In Touch</a>
+                        <a href="mailto:gauravbharadwaj.bharadwaj@gmail.com" class="btn btn--outline">Download Resume</a>
+                    </div>
+                </div>
+                
+                <!-- Profile Picture Section -->
+                <div class="hero-image">
+                    <div class="profile-picture">
+<!--                        <div class="profile-placeholder">-->
+<!--                            <span class="profile-initial">GB</span>-->
+<!--                        </div>-->
+                        <img src="assets/mypic.jpg" alt="Gaurav Bharadwaj" class="profile-img">
+                        <div class="profile-status">
+                            <span class="status-dot"></span>
+                            Available for opportunities
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h3>About Me</h3>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Gaurav, a passionate backend developer based in <strong>Haywards Heath, UK</strong>. I have 7 years of practical experience in the complete software development life cycle, including design, development, testing, and implementation.</p>
+                    
+                    <p>I specialize in developing <strong>RESTful web services</strong> and <strong>microservices in GoLang</strong>, with a strong focus on Test-Driven Development (TDD) and Behavior-Driven Development (BDD). My expertise spans across modern backend technologies, cloud platforms, and containerization.</p>
+
+                    <p>Currently, I'm working as a Software Engineer at <strong>American Express UK</strong>, where I develop and maintain GoLang applications, optimize complex SQL queries, and work with global teams managing partner benefits for major brands like Hilton and British Airways.</p>
+
+                    <p>Here are a few technologies I've been working with recently:</p>
+                    <ul class="tech-list">
+                        <li>GoLang (Gin, Echo)</li>
+                        <li>Microservices Architecture</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>PostgreSQL & MongoDB</li>
+                        <li>AWS & Google Cloud</li>
+                        <li>GRPC & REST APIs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h3>Where I've Worked</h3>
+            </div>
+            <div class="experience-content">
+                <div class="experience-tabs">
+                    <button class="tab-btn active" data-target="amex">American Express</button>
+                    <button class="tab-btn" data-target="remote">Remote state</button>
+                    <button class="tab-btn" data-target="hotcocoa">Hot Cocoa Softwares</button>
+                </div>
+                
+                <div class="experience-panels">
+                    <div class="tab-panel active" id="amex">
+                        <div class="panel-header">
+                            <h4>Software Engineer <span class="company">@ American Express</span></h4>
+                            <div class="duration">June 2024 - Present</div>
+                        </div>
+                        <ul class="panel-content">
+                            <li>Developed and maintained a GoLang application, optimizing complex SQL queries to reduce latency and boost query throughput for APIs</li>
+                            <li>Contributed to developing REST API services, creating scalable APIs to enhance user experience across various products</li>
+                            <li>Working with Global Loyalty and partner team, managing partner benefits for major brands like Hilton and British Airways</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">GoLang</span>
+                            <span class="tech-tag">Microservices</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Splunk</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="remote">
+                        <div class="panel-header">
+                            <h4>Senior Backend Developer <span class="company">@ Remote state</span></h4>
+                            <div class="duration">December 2020 - March 2024</div>
+                        </div>
+                        <ul class="panel-content">
+                            <li>Developed and maintained GoLang applications optimizing complex SQL queries, reducing latency and boosting API throughput</li>
+                            <li>Engineered real-time chat application using web sockets with robust media handling and third-party audio/video integration</li>
+                            <li>Deployed Golang applications on Kubernetes clusters from scratch across multiple environments</li>
+                            <li>Established comprehensive CI/CD pipelines for automated deployment processes</li>
+                            <li>Developed GRPC and REST API services creating scalable solutions</li>
+                            <li>Implemented comprehensive unit and integration testing improving code quality</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">GoLang</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">GRPC</span>
+                            <span class="tech-tag">WebSockets</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">NoSQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="hotcocoa">
+                        <div class="panel-header">
+                            <h4>Backend Developer <span class="company">@ Hot Cocoa Softwares</span></h4>
+                            <div class="duration">October 2018 - November 2020</div>
+                        </div>
+                        <ul class="panel-content">
+                            <li>Developed scalable backend using RESTful API services</li>
+                            <li>Created Docker files for containerized deployment environments</li>
+                            <li>Implemented comprehensive unit tests for Golang applications</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">GoLang</span>
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Unit Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h3>Skills & Technologies</h3>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages & Frameworks</h4>
+                    <div class="skill-items">
+                        <span class="skill-item">GoLang (Gin, Echo)</span>
+                        <span class="skill-item">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <div class="skill-items">
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">Redis</span>
+                        <span class="skill-item">Elasticsearch</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>DevOps & Cloud</h4>
+                    <div class="skill-items">
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Kubernetes</span>
+                        <span class="skill-item">CI/CD Pipelines</span>
+                        <span class="skill-item">GitHub Actions</span>
+                        <span class="skill-item">CircleCI</span>
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">Google Cloud</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Other Technologies</h4>
+                    <div class="skill-items">
+                        <span class="skill-item">Microservices</span>
+                        <span class="skill-item">REST APIs</span>
+                        <span class="skill-item">GRPC</span>
+                        <span class="skill-item">GraphQL</span>
+                        <span class="skill-item">WebSockets</span>
+                        <span class="skill-item">Kafka</span>
+                        <span class="skill-item">Lambda</span>
+                        <span class="skill-item">Serverless</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h3>Featured Projects</h3>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h4>American Express - Global Loyalty Platform</h4>
+                        <div class="project-duration">Jun 2024 - Present</div>
+                    </div>
+                    <p class="project-description">
+                        Partner benefits system for major brands like Hilton and British Airways, serving millions of Amex customers globally with optimized GoLang applications and SQL query performance.
+                    </p>
+                    <ul class="project-features">
+                        <li>Serving millions of Amex customers globally</li>
+                        <li>Partner integrations with Hilton and British Airways</li>
+                        <li>High-performance API optimization</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">GoLang</span>
+                        <span class="tech-tag">Microservices</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Splunk</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h4>Zinc Systems - Crisis Management Platform</h4>
+                        <div class="project-duration">Oct 2022 - Mar 2024</div>
+                    </div>
+                    <p class="project-description">
+                        Implemented zinc-synapse, an efficient crisis management system by integrating diverse tools into a web platform, streamlining incident response with event-driven distributed logging system similar to Kafka.
+                    </p>
+                    <ul class="project-features">
+                        <li>Event-driven distributed logging system similar to Kafka</li>
+                        <li>Real-time incident response coordination</li>
+                        <li>Microservices architecture for scalability</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">GoLang</span>
+                        <span class="tech-tag">Lambda</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Microservices</span>
+                        <span class="tech-tag">GRPC</span>
+                        <span class="tech-tag">RabbitMQ</span>
+                        <span class="tech-tag">NATS JetStream</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h4>Orby AI - Document Processing Platform</h4>
+                        <div class="project-duration">Jul 2023 - Mar 2024</div>
+                    </div>
+                    <p class="project-description">
+                        Revamped document handling for organizations with high document volumes using Document AI to automate repetitive tasks, including contract processing and invoice validation.
+                    </p>
+                    <ul class="project-features">
+                        <li>Automated contract processing and invoice validation</li>
+                        <li>High-volume document management</li>
+                        <li>AI-powered document analysis and extraction</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">GoLang</span>
+                        <span class="tech-tag">Postgres</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">GRPC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h3>Get In Touch</h3>
+            </div>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p>I'm always interested in hearing about new opportunities, whether that's for a full-time role, consulting, or just a friendly chat about technology. My inbox is always open!</p>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <a href="mailto:gauravbharadwaj.bharadwaj@gmail.com">gauravbharadwaj.bharadwaj@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong>
+                        <a href="tel:+447823813425">+44 7823813425</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong>
+                        <span>Haywards Heath, UK</span>
+                    </div>
+                </div>
+
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/gaurav-bharadwaj-55186bb4/" target="_blank" class="btn btn--primary">LinkedIn Profile</a>
+                    <a href="https://github.com/gaurav-wl" target="_blank" class="btn btn--outline">GitHub Profile</a>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Gaurav Bharadwaj. Built with passion and attention to detail.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/gaurav-bharadwaj-55186bb4/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/gaurav-wl" target="_blank">GitHub</a>
+                    <a href="mailto:gauravbharadwaj.bharadwaj@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
