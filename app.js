@@ -130,15 +130,15 @@ function initializeHeroButtons() {
         });
     }
     
-    if (resumeBtn) {
-        resumeBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Create a mailto link with resume request
-            const subject = encodeURIComponent('Resume Request - Gaurav Bharadwaj');
-            const body = encodeURIComponent('Hi Gaurav,\n\nI would like to request a copy of your resume.\n\nBest regards');
-            window.location.href = `mailto:gauravbharadwaj.bharadwaj@gmail.com?subject=${subject}&body=${body}`;
-        });
-    }
+    // if (resumeBtn) {
+    //     resumeBtn.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         // Create a mailto link with resume request
+    //         const subject = encodeURIComponent('Resume Request - Gaurav Bharadwaj');
+    //         const body = encodeURIComponent('Hi Gaurav,\n\nI would like to request a copy of your resume.\n\nBest regards');
+    //         window.location.href = `mailto:gauravbharadwaj.bharadwaj@gmail.com?subject=${subject}&body=${body}`;
+    //     });
+    // }
 
     // Add interaction to skill badges
     const skillBadges = document.querySelectorAll('.skill-badge');
