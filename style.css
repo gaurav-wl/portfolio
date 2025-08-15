@@ -1401,24 +1401,73 @@ section {
 }
 
 .contact-info {
-  margin-bottom: var(--space-24);
+  display: table;
+  margin: 0 auto var(--space-24) auto; /* center table block */
 }
 
 .contact-item {
-  margin-bottom: var(--space-8);
-  font-size: var(--font-size-sm);
+  display: table-row;
+}
+
+.contact-item strong,
+.contact-item a,
+.contact-item span {
+  display: table-cell;
+  font-size: var(--font-size-md);
+  padding: 6px 16px 6px 0;
+  white-space: nowrap;
+  text-align: left;
+  vertical-align: middle;
 }
 
 .contact-item strong {
+  font-weight: bold;
   color: var(--portfolio-text-primary);
-  display: inline-block;
-  width: 80px;
-  text-align: left;
+  min-width: 120px;  /* Ensures all labels same width */
+  width: 120px;
+  text-align: right;
+  padding-right: 20px;
 }
-
-.contact-item a {
+.contact-item a, .contact-item span {
   color: var(--portfolio-accent);
 }
+
+@media (max-width: 520px) {
+  .contact-info {
+    display: block;
+  }
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  .contact-item strong {
+    text-align: left;
+    padding-right: 0;
+    min-width: 0;
+    width: auto;
+    margin-bottom: 2px;
+  }
+}
+
+.contact-item strong {
+  width: 120px;          /* <--- This is the key! They all get the same width */
+  min-width: 120px;
+  display: inline-block;
+  text-align: right;
+  font-weight: bold;
+  color: var(--portfolio-text-primary);
+  margin-right: 10px;
+}
+
+.contact-item a,
+.contact-item span {
+  color: var(--portfolio-accent);
+  text-align: left;
+  word-break: break-word;
+}
+
 
 .contact-links {
   display: flex;
