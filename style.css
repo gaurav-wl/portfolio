@@ -708,6 +708,30 @@ select.form-control {
   display: none;
 }
 
+.brand-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--portfolio-accent), var(--color-teal-600));
+  color: var(--color-btn-primary-text);
+  font-family: var(--font-family-mono);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border: 2px solid #11555633;   /* subtle border, adjust to taste */
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.brand-circle:hover {
+  background: var(--portfolio-accent-hover);
+  color: var(--color-text);
+}
+
+
 /* Accessibility */
 .sr-only {
   position: absolute;
@@ -1756,8 +1780,11 @@ section {
   border-radius: 50%;
   border: 4px solid #218d8d;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  object-position: 105% center;
+  object-position: 90% center;
+  transform: rotate(-14deg);   /* Adds a gentle left tilt */
+  transition: transform 0.5s cubic-bezier(.6,-0.28,.74,.05);
 }
+
 .status-dot {
   width: 10px;
   height: 10px;
